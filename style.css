@@ -14,9 +14,9 @@ body{
   margin: 0 auto;
 }
 
-.piedepaginaCreditos {
+.pieDePagina {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #000000;
-  font-size: small;
-  background-color: #dee9f098;
+  font-size: large;
 
 }
