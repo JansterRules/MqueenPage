@@ -1,6 +1,7 @@
 body{
-    
+    margin: 0;
     background-color: #f2d785;
+    padding: 0;
 }
 .fondosBarras {
     font-size: small;
