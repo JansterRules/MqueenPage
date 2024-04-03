@@ -1,13 +1,19 @@
-body{
-    
-    background-color: #f2d785;
+body {
+  background-color: #f2d785;
 }
 .fondosBarras {
-    font-size: small;
-    font-style: italic;
+  font-size: small;
+  font-style: italic;
 }
 
 .carousel-image {
-    max-width: 200px;
-    margin: 0 auto;
-  }
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.piedepaginaCreditos {
+  color: #000000;
+  font-size: small;
+  background-color: #dee9f098;
+
+}
