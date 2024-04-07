@@ -1,9 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('img/bg.jpg');
-  background-repeat: repeat;
-  background-size: auto;
+  background-color: #c2c2c2;
 
 }
 .fondosBarras {
@@ -24,7 +22,7 @@ body {
 
 .textoCarrusel {
   color: #ffff;
-  font-size: small;
+  font-size: x-large;
   margin-top: 4px;
   text-align: center;
 }
