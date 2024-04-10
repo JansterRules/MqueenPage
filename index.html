@@ -18,25 +18,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Fin de Scripts JavaScript -->
 
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-expand-md fondosBarras" style="background-color: #A62424;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/img/logo.jpg" alt="" width="80" height="74">
             </a>            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Taller Makween</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="btn btn-outline-light me-3" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light me-3" href="register.html">Registrarse</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light me-3" href="login.html">Ingresar</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-outline-light me-3" href="galeria.html">Galería</a>
@@ -45,144 +40,143 @@
                         <a class="btn btn-outline-light me-3" href="faq.html">Preguntas frecuentes</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light me-3" href="login.html">Ingresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light" href="register.html">Registrarse</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <!-- Fin de Barra de navegación -->
+    
 
-
-
-    <!-- Inicio del Carrusel -->
-    <div class="container-fluid" style="background-color: #23211a; margin-bottom: 5%;">
-        <div class="row">
-            <div class="col-12">
-                <div style="padding-bottom: 1%; padding-top: 1%;">
-                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="carrusel/i1.jpg" class="d-block w-100 carousel-image" alt="Raptor l">
-                                <div class="carousel-caption">
-                                    <h5 style="text-align: left;">Raptor l</h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src="carrusel/i2.jpg" class="d-block w-100 carousel-image" alt="Raptor ll">
-                                <div class="carousel-caption">
-                                    <h5 style="text-align: left;">Raptor ll</h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="carrusel/i3.jpg" class="d-block w-100 carousel-image" alt="Raptor lll">
-                                <div class="carousel-caption">
-                                    <h5 style="text-align: left;">Raptor lll</h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="carrusel/i4.jpg" class="d-block w-100 carousel-image" alt="Red Queen">
-                                <div class="carousel-caption">
-                                    <h5 style="text-align: left;">Red King</h5>
-                                </div>
-                            </div>
+<!-- Inicio del Carrusel -->
+<div class="container-fluid" style="background-color: #23211a; margin-bottom: 5%;">
+<div class="row">
+    <div class="col-12">
+        <div style="padding-bottom: 1%; padding-top: 1%;">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="carrusel/i1.jpg" class="d-block w-100 carousel-image" alt="Raptor l">
+                        <div class="carousel-caption">
+                            <h5 style="text-align: left;">Raptor l</h5>
                         </div>
-                        
-                        <!-- Botones de dirección -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Siguiente</span>
-                        </button>
-                        <!-- Fin de los botones de dirección -->
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="carrusel/i2.jpg" class="d-block w-100 carousel-image" alt="Raptor ll">
+                        <div class="carousel-caption">
+                            <h5 style="text-align: left;">Raptor ll</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="carrusel/i3.jpg" class="d-block w-100 carousel-image" alt="Raptor lll">
+                        <div class="carousel-caption">
+                            <h5 style="text-align: left;">Raptor lll</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="carrusel/i4.jpg" class="d-block w-100 carousel-image" alt="Red Queen">
+                        <div class="carousel-caption">
+                            <h5 style="text-align: left;">Red King</h5>
+                        </div>
                     </div>
                 </div>
-            </div>   
+                
+                <!-- Botones de dirección -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+                <!-- Fin de los botones de dirección -->
+            </div>
+        </div>
+    </div>   
+</div>
+</div>
+<!-- Fin del Carrusel -->
+
+
+
+
+<div class="container">
+    <!-- Tarjetas -->
+    <div class="row">
+        <div class="col-12 col-md-6">  <!-- Responsivo -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="carrusel/i7.jpg" class="img-fluid rounded-start img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">La pasión que nos mueve</h5>
+                            <p class="card-text">10 Años de experiencia en el rubro de la mecánica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 2-->
+        <div class="col-12 col-md-6"> <!-- Responsivo -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="carrusel/i8.jpg" class="img-fluid rounded-start img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Explorando nuevas fronteras</h5>
+                            <p class="card-text">Descubre un mundo de posibilidades con nuestra tecnología avanzada y nuestro equipo de expertos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Fin del Carrusel -->
-
-    <div class="container">
-        <!-- Tarjetas -->
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="carrusel/i7.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">La pasión que nos mueve</h5>
-                    <p class="card-text">10 Años de experiencia en el rubro de la mecánica.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="carrusel/i8.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Explorando nuevas fronteras</h5>
-                    <p class="card-text">Descubre un mundo de posibilidades con nuestra tecnología avanzada y nuestro equipo de expertos.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Tarjeta compacta con eslogan (responsive) -->
-        <div class="card text-bg-dark mb-3 mx-auto" style="max-width: 600px;">
-            <img src="img/indexPortada.jpg" class="card-img" style="max-width: 100%;">
-            <div class="card-body text-center">
-            <h5 class="card-title">Taller Makween</h5>
-            <p class="card-text">Transformando ideas en realidad.</p>
-            <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
-            </div>
-        </div>
-  
-      
-      
+</div>
 
 
 
-    <hr>
-    <!-- Pie de página -->
-    <div class="container-fluid pieDePagina">
-        <div class="row">
-            <div class="col-12 col-md-12">
-                <ul>
-                    <li><a href="#" style="color: black;">Términos y condiciones</a></li> 
-                    <li><a href="#" style="color: black;">Política de privacidad</a></li>
-                    <li><a href="#" style="color: black;">Contacto</a></li>
-                </ul>
-            </div>            
-        </div>
-    </div>
-    <!-- Fin del Pie de página -->
+
+
+
+
+
+<hr>
+<!-- Pie de página -->
+<div class="container-fluid pieDePagina">
+<div class="row">
+    <div class="col-12 col-md-12">
+        <ul>
+            <li><a href="#" style="color: black;">Términos y condiciones</a></li> 
+            <li><a href="#" style="color: black;">Política de privacidad</a></li>
+            <li><a href="#" style="color: black;">Contacto</a></li>
+        </ul>
+    </div>            
+</div>
+</div>
+<!-- Fin del Pie de página -->
     
-    <!-- Inicio de biblioteca popover -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<!-- Inicio de biblioteca popover -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
-    <!-- Link: https://getbootstrap.com/docs/5.3/getting-started/download/#source-files   -->
-    <!-- fin biblioteca popover-->
+<!-- Link: https://getbootstrap.com/docs/5.3/getting-started/download/#source-files   -->
+<!-- fin biblioteca popover-->
 
-    <!-- Inicio iniciar script popover, para utilizarlos-->
-    <script>
-        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-    </script>
-    <!-- Fin inicio popovers-->
+<!-- Inicio iniciar script popover, para utilizarlos-->
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+<!-- Fin inicio popovers-->
 
 
 </body>
