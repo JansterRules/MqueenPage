@@ -14,14 +14,6 @@ Proyecto semestral para la asignatura PGY3121 - Programación Web a cargo del tu
 
 5. **register.html**: Esta página contiene un formulario de registro, solicitando sus datos pertinentes.
 
-## Herramientas utilizadas
-
-- **HTML5**
-- **CSS**
-- **JavaScript**
-- **Bootstrap**
-- **jQuery**
-
 ## El proyecto sigue está en progreso
 
 ### TO-DO:
