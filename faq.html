@@ -13,6 +13,7 @@
     <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
 </head>
 <body> 
+
     <!-- Scripts JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -20,11 +21,11 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/img/logo.jpg" alt="" width="80" height="74">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="" width="80" height="74">
             </a>            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <a class="navbar-brand" href="#">Taller Makween</a>
+            <a class="navbar-brand" href="index.html">Taller Makween</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -51,73 +52,92 @@
             </div>
         </div>
     </nav>
-    <!-- Contenido del FAQ con modal -->
-    <div class="container">
-        <h2 class="mt-5 mb-4">Preguntas frecuentes</h2>
-        <div class="accordion" id="accordionFAQ">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        ¿Cuáles son los requisitos para registrarse?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Para registrarse, necesitas proporcionar tu nombre, dirección de correo electrónico y crear una contraseña segura.
-                    </div>
-                </div>
+
+    <div class="container-fluid">
+        <div class="row">
+    
+            <div class="col-1" style="background-color: rgb(223, 223, 223);">
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ¿Cómo puedo restablecer mi contraseña?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Puedes restablecer tu contraseña haciendo clic en "Olvidé mi contraseña" en la página de inicio de sesión y siguiendo las instrucciones proporcionadas.
+    
+    
+            <div class="col-10">
+                <!-- Contenido del FAQ con modal -->
+                <div class="container" style="padding-bottom: 3%;">
+                    <h2 class="mt-5 mb-4">Preguntas frecuentes</h2>
+                    <div class="accordion" id="accordionFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    ¿Cuáles son los requisitos para registrarse?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Para registrarse, necesitas proporcionar tu nombre, dirección de correo electrónico y crear una contraseña segura.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Cómo puedo restablecer mi contraseña?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Puedes restablecer tu contraseña haciendo clic en "Olvidé mi contraseña" en la página de inicio de sesión y siguiendo las instrucciones proporcionadas.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Cómo puedo contactar al servicio de atención al cliente?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Puedes contactar a nuestro servicio de atención al cliente llamando al número +56937381188 o enviando un correo electrónico a support@yopmail.com.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    ¿Aceptan pagos con tarjeta de crédito?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Sí, aceptamos pagos con tarjeta de crédito Visa, Mastercard y American Express.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    ¿Cómo puedo actualizar mi información de contacto?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Puedes actualizar tu información de contacto iniciando sesión en tu cuenta y navegando a la sección de configuración de la cuenta.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+    
+
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ¿Cómo puedo contactar al servicio de atención al cliente?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Puedes contactar a nuestro servicio de atención al cliente llamando al número +56937381188 o enviando un correo electrónico a support@yopmail.com.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        ¿Aceptan pagos con tarjeta de crédito?
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Sí, aceptamos pagos con tarjeta de crédito Visa, Mastercard y American Express.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        ¿Cómo puedo actualizar mi información de contacto?
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        Puedes actualizar tu información de contacto iniciando sesión en tu cuenta y navegando a la sección de configuración de la cuenta.
-                    </div>
-                </div>
+
+            <div class="col-1" style="background-color: rgb(223, 223, 223);"> <!-- Columna del body 3, para colocar anuncios etc -->
             </div>
         </div>
+    
     </div>
-        
+
+
     <!-- Modal -->
     <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -137,19 +157,20 @@
     </div>
     <!-- Fin del modal -->
     
-    <hr>
     
     <!-- Pie de página -->
     <div class="container-fluid pieDePagina">
+
+        <h1 style="text-align: center; "> ¡Contáctanos en TALLER MQUEEN!</h1>
         <div class="row">
-            <div class="col-12 col-md-12">
-                <ul>
-                    <li><a href="#" style="color: black;">Términos y condiciones</a></li> 
-                    <li><a href="#" style="color: black;">Política de privacidad</a></li>
-                    <li><a href="#" style="color: black;">Contacto</a></li>
-                </ul>
-            </div>            
-        </div>
+        <div class="col-12 col-md-12">
+            <ul>
+                <li><a href="#" style="color: white;">Términos y condiciones</a></li> 
+                <li><a href="#" style="color: white;">Política de privacidad</a></li>
+                <li><a href="#" style="color: white;">Contacto</a></li>
+            </ul>
+        </div>            
+    </div>
     </div>
     <!-- Fin del Pie de página -->
 </body>
