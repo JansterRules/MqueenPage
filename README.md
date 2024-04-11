@@ -14,7 +14,7 @@ Proyecto semestral para la asignatura PGY3121 - Programación Web a cargo del tu
 
 5. **register.html**: Esta página contiene un formulario de registro, solicitando sus datos pertinentes.
 
-## El proyecto sigue está en progreso
+## El proyecto sigue en progreso
 
 ### TO-DO:
 - Vista de carrito de compras.
