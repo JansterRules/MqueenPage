@@ -17,7 +17,7 @@ Proyecto semestral para la asignatura PGY3121 - Programación Web a cargo del tu
 ## Herramientas utilizadas
 
 - **HTML5**
-- **CSS3**
+- **CSS**
 - **JavaScript**
 - **Bootstrap**
 - **jQuery**
