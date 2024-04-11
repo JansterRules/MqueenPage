@@ -22,7 +22,7 @@ Proyecto semestral para la asignatura PGY3121 - Programación Web a cargo del tu
 - **Bootstrap**
 - **jQuery**
 
-## El proyecto sigue en realización.
+## El proyecto sigue está en progreso
 
 ### TO-DO:
 - Vista de carrito de compras.
