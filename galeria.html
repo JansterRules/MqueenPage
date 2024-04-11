@@ -1,195 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería en Makween</title>
-    
-    <!-- Enlace a la hoja de estilos de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    
-    <!-- Hoja de estilos personalizada -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
-    <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
-</head>
-<body> 
-    <!-- Scripts JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Fin de Scripts JavaScript -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Galería en Makween</title>
+      <!-- Enlace a la hoja de estilos de Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+      <!-- Hoja de estilos personalizada -->
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
+   </head>
+   <body>
+      <!-- Scripts JavaScript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Fin de Scripts JavaScript -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.jpg" alt="" width="80" height="74">
+            <img src="img/logo.jpg" alt="" width="80" height="74">
             </a>            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <a class="navbar-brand" href="#">Taller Makween</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light me-3" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light me-3" href="galeria.html">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light me-3" href="faq.html">Preguntas frecuentes</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light me-3" href="login.html">Ingresar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light" href="register.html">Registrarse</a>
-                    </li>
-                </ul>
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="btn btn-outline-light me-3" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="btn btn-outline-light me-3" href="galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="btn btn-outline-light me-3" href="faq.html">Preguntas frecuentes</a>
+                  </li>
+               </ul>
+               <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="btn btn-outline-light me-3" href="login.html">Ingresar</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="btn btn-outline-light" href="register.html">Registrarse</a>
+                  </li>
+               </ul>
             </div>
-        </div>
-    </nav>
-    
-    <!-- Contenido de la galería con cards -->
-    <div class="container-fluid">
-        <div class="row">
-    
+         </div>
+      </nav>
+      <!-- Contenido de la galería con cards -->
+      <div class="container-fluid">
+         <div class="row">
             <div class="col-1" style="background-color: rgb(223, 223, 223);">
             </div>
-    
-    
             <div class="col-10">
-                <div class="container">
-                    <div class="container-fluid text-center">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
-                            <!-- Card 1 -->
-                            <div class="col">
-                                <div class="card">
-                                    <img src="carrusel/i1.jpg" class="card-img-top" alt="Diagnóstico del Problema 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Diagnóstico del Problema" data-bs-content="Se detectó una fuga de aceite en el motor que requería reparación inmediata para evitar daños mayores.">ℹ️</a></h5>
-                                        <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Mecánico" data-bs-content="El trabajo fue realizado por el experimentado mecánico Roberto Sánchez, con más de 10 años de experiencia en reparaciones de motores.">ℹ️</a></h5>
-                                        <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Materiales Utilizados" data-bs-content="Herramientas de mecánica básicas (llave inglesa, alicates, etc.). Aceite de motor de alta calidad.">ℹ️</a></h5>
-                                        <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Fecha de Realización" data-bs-content="La fecha de realización del trabajo fue el 01 de Enero del año 2024">ℹ️</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Card 2 -->
-                            <div class="col">
-                                <div class="card">
-                                    <img src="carrusel/i2.jpg" class="card-img-top" alt="Diagnóstico del Problema 2">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Diagnóstico del Problema 2" data-bs-content="Los frenos delanteros mostraban un desgaste excesivo, lo que provocaba un rendimiento deficiente del sistema de frenado.">ℹ️</a></h5>
-                                        <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Mecánico 2" data-bs-content="El mecánico de confianza del cliente, Laura Martínez, fue responsable de llevar a cabo el reemplazo de las pastillas de freno delanteras.">ℹ️</a></h5>
-                                        <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Materiales Utilizados 2" data-bs-content="Juego de pastillas de freno delanteras de alta calidad. Llave de tubo para quitar los pernos de las pinzas de freno. Grasa de silicona para lubricar los componentes del sistema de freno.">ℹ️</a></h5>
-                                        <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Fecha de Realización 2" data-bs-content="La fecha de realización del trabajo fue el 12 de octubre del año 2023">ℹ️</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="col">
-                                <div class="card">
-                                    <img src="carrusel/i3.jpg" class="card-img-top" alt="Diagnóstico del Problema 3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Diagnóstico del Problema 3" data-bs-content="El sistema de refrigeración presentaba una fuga en el radiador que causaba sobrecalentamiento del motor.">ℹ️</a></h5>
-                                        <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Mecánico 3" data-bs-content="El trabajo fue realizado por el equipo de mecánicos de la empresa, liderado por el técnico especializado Manuel Rodríguez.">ℹ️</a></h5>
-                                        <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Materiales Utilizados 3" data-bs-content="Kit de reparación de fugas de radiador. Recipiente de anticongelante nuevo. Herramientas de mecánica básicas (llave inglesa, alicates, etc.).">ℹ️</a></h5>
-                                        <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Fecha de Realización 3" data-bs-content="La fecha de realización del trabajo fue el 21 de marzo del año 2022">ℹ️</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 4 -->
-                            <div class="col">
-                                <div class="card">
-                                    <img src="carrusel/i4.jpg" class="card-img-top" alt="Diagnóstico del Problema 4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Diagnóstico del Problema 4" data-bs-content="Se identificó un desgaste prematuro de los neumáticos delanteros debido a una alineación incorrecta del vehículo.">ℹ️</a></h5>
-                                        <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Mecánico 4" data-bs-content="El mecánico experto en alineación y balanceo, Eduardo Gómez, fue responsable de corregir la alineación de las ruedas delanteras.">ℹ️</a></h5>
-                                        <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Materiales Utilizados 4" data-bs-content="Ajuste de la alineación de las ruedas delanteras. Equipo de alineación láser de alta precisión.">ℹ️</a></h5>
-                                        <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Fecha de Realización 4" data-bs-content="La fecha de realización del trabajo fue el 14 de noviembre del año 2022">ℹ️</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 5 -->
-                            <div class="col">
-                                <div class="card">
-                                    <img src="carrusel/i5.jpg" class="card-img-top" alt="Diagnóstico del Problema 5">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Diagnóstico del Problema 5" data-bs-content="Se encontró una fuga en el sistema de escape debido a un silenciador corroído, lo que causaba ruidos y emisiones de escape inusuales.">ℹ️</a></h5>
-                                        <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Mecánico 5" data-bs-content="El mecánico de escape especializado, Carlos López, fue responsable de reemplazar el silenciador defectuoso y reparar la fuga en el sistema de escape.">ℹ️</a></h5>
-                                        <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Materiales Utilizados 5" data-bs-content="Silenciador de escape nuevo. Herramientas de corte y soldadura para reparar la fuga en el sistema de escape.">ℹ️</a></h5>
-                                        <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Fecha de Realización 5" data-bs-content="La fecha de realización del trabajo fue el 07 de octubre del año 2023">ℹ️</a></h5>
-                                    </div>
-                                </div>
-                            </div>
+               <div class="container">
+                  <div class="container-fluid text-center">
+                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                        <!-- Card 1-->
+                        <div class="col">
+                           <div class="card">
+                              <img src="carrusel/i1.jpg" class="card-img-top" alt="Diagnóstico del Problema 2">
+                              <div class="card-body">
+                                 <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 2" data-bs-content="Los frenos delanteros mostraban un desgaste excesivo, lo que provocaba un rendimiento deficiente del sistema de frenado.">ℹ️</a></h5>
+                                 <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 2" data-bs-content="El mecánico de confianza del cliente, Laura Martínez, fue responsable de llevar a cabo el reemplazo de las pastillas de freno delanteras.">ℹ️</a></h5>
+                                 <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Materiales Utilizados 2" data-bs-content="Juego de pastillas de freno delanteras de alta calidad. Llave de tubo para quitar los pernos de las pinzas de freno. Grasa de silicona para lubricar los componentes del sistema de freno.">ℹ️</a></h5>
+                                 <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Fecha de Realización 2" data-bs-content="La fecha de realización del trabajo fue el 12 de octubre del año 2023">ℹ️</a></h5>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <!-- Card 2 -->
+                        <div class="col">
+                           <div class="card">
+                              <img src="carrusel/i2.jpg" class="card-img-top" alt="Diagnóstico del Problema 2">
+                              <div class="card-body">
+                                 <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 2" data-bs-content="Los frenos delanteros mostraban un desgaste excesivo, lo que provocaba un rendimiento deficiente del sistema de frenado.">ℹ️</a></h5>
+                                 <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 2" data-bs-content="El mecánico de confianza del cliente, Laura Martínez, fue responsable de llevar a cabo el reemplazo de las pastillas de freno delanteras.">ℹ️</a></h5>
+                                 <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Materiales Utilizados 2" data-bs-content="Juego de pastillas de freno delanteras de alta calidad. Llave de tubo para quitar los pernos de las pinzas de freno. Grasa de silicona para lubricar los componentes del sistema de freno.">ℹ️</a></h5>
+                                 <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Fecha de Realización 2" data-bs-content="La fecha de realización del trabajo fue el 12 de octubre del año 2023">ℹ️</a></h5>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col">
+                           <div class="card">
+                              <img src="carrusel/i3.jpg" class="card-img-top" alt="Diagnóstico del Problema 3">
+                              <div class="card-body">
+                                 <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 3" data-bs-content="El sistema de refrigeración presentaba una fuga en el radiador que causaba sobrecalentamiento del motor.">ℹ️</a></h5>
+                                 <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 3" data-bs-content="El trabajo fue realizado por el equipo de mecánicos de la empresa, liderado por el técnico especializado Manuel Rodríguez.">ℹ️</a></h5>
+                                 <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Materiales Utilizados 3" data-bs-content="Kit de reparación de fugas de radiador. Recipiente de anticongelante nuevo. Herramientas de mecánica básicas (llave inglesa, alicates, etc.).">ℹ️</a></h5>
+                                 <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Fecha de Realización 3" data-bs-content="La fecha de realización del trabajo fue el 21 de marzo del año 2022">ℹ️</a></h5>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col">
+                           <div class="card">
+                              <img src="carrusel/i4.jpg" class="card-img-top" alt="Diagnóstico del Problema 4">
+                              <div class="card-body">
+                                 <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 4" data-bs-content="Se identificó un desgaste prematuro de los neumáticos delanteros debido a una alineación incorrecta del vehículo.">ℹ️</a></h5>
+                                 <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 4" data-bs-content="El mecánico experto en alineación y balanceo, Eduardo Gómez, fue responsable de corregir la alineación de las ruedas delanteras.">ℹ️</a></h5>
+                                 <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Materiales Utilizados 4" data-bs-content="Ajuste de la alineación de las ruedas delanteras. Equipo de alineación láser de alta precisión.">ℹ️</a></h5>
+                                 <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Fecha de Realización 4" data-bs-content="La fecha de realización del trabajo fue el 14 de noviembre del año 2022">ℹ️</a></h5>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="col">
+                           <div class="card">
+                              <img src="carrusel/i5.jpg" class="card-img-top" alt="Diagnóstico del Problema 5">
+                              <div class="card-body">
+                                 <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 5" data-bs-content="Se encontró una fuga en el sistema de escape debido a un silenciador corroído, lo que causaba ruidos y emisiones de escape inusuales.">ℹ️</a></h5>
+                                 <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 5" data-bs-content="El mecánico de escape especializado, Carlos López, fue responsable de reemplazar el silenciador defectuoso y reparar la fuga en el sistema de escape.">ℹ️</a></h5>
+                                 <h5 class="card-title">Materiales <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Materiales Utilizados 5" data-bs-content="Silenciador de escape nuevo. Herramientas de corte y soldadura para reparar la fuga en el sistema de escape.">ℹ️</a></h5>
+                                 <h5 class="card-title">Fecha <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Fecha de Realización 5" data-bs-content="La fecha de realización del trabajo fue el 07 de octubre del año 2023">ℹ️</a></h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-1" style="background-color: rgb(223, 223, 223);"> <!-- Columna del body 3, para colocar anuncios etc -->
+            <div class="col-1" style="background-color: rgb(223, 223, 223);">
+               <!-- Columna del body 3, para colocar anuncios etc -->
             </div>
-        </div>
-    
-    </div>
-
-
-
-    <!-- Fin del contenido de la galería -->
-    
-    
-    <!-- Inicio iniciar script popovers-->
-    <script>
-        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-    </script>
-    <!-- Fin inicio popovers-->
-
-
-    <!-- Link: https://getbootstrap.com/docs/5.3/getting-started/download/#source-files   -->
-    <!-- Cargar popover -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    
-    
-    <!-- Pie de página -->
-    <div class="container-fluid pieDePagina">
-
-        <h1 style="text-align: center; "> ¡Contáctanos en TALLER MQUEEN!</h1>
-        <div class="row">
+         </div>
+      </div>
+      <!-- Fin del contenido de la galería -->
+      <!-- Inicio iniciar script popovers-->
+      <script>
+         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+         return new bootstrap.Popover(popoverTriggerEl)
+         })
+         
+      </script>
+      <!-- Fin popovers-->
+      <!-- Pie de página -->
+      <div class="container-fluid pieDePagina">
+         <h1 style="text-align: center; "> ¡Contáctanos en TALLER MQUEEN!</h1>
+         <div class="row">
             <div class="col-12 col-md-12">
-                <ul>
-                    <li><a href="#" style="color: white;">Términos y condiciones</a></li> 
-                    <li><a href="#" style="color: white;">Política de privacidad</a></li>
-                    <li><a href="#" style="color: white;">Contacto</a></li>
-                </ul>
-            </div>  
-        </div>          
-    </div>
-    <!-- Fin del Pie de página --> 
-
-
-
-</body>
+               <ul>
+                  <li><a href="#" style="color: white;">Términos y condiciones</a></li>
+                  <li><a href="#" style="color: white;">Política de privacidad</a></li>
+                  <li><a href="#" style="color: white;">Contacto</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- Fin del Pie de página --> 
+   </body>
 </html>
