@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Trabaja en Makween</title>
+      <!-- Enlace a la hoja de estilos de Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+      <!-- Hoja de estilos personalizada -->
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
+   </head>
+   <body>
+
+      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+            <img src="img/logo.jpg" alt="" width="80" height="74">
+            </a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">Taller Makween</a>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="faq.html">Preguntas frecuentes</a>
+                  </li>
+               </ul>
+               <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="login.html">Ingresar</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="register.html">Registrar</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <form>
+        <div class="input-group">
+            <span class="input-group-text" style="background-color:">Ingrese rut</span>
+            <input type="text" aria-label="First name" class="form-control" style="margin-left: 60px;">
+            <input type="text" aria-label="Last name" class="form-control" style="margin-left: 20px;">
+        </div>
+        <div class="row-3">
+            <div class="col-md-6">
+                <label for="inputNombre" class="form-label">Ingrese sus Nombres:</label>
+                <input type="text" class="form-control" id="inputNombre" placeholder="ejemplo nombre">
+            </div>
+        </div>
+        <div class="row-">
+                <div class="col-12">
+                    <label for="inputAppaterno" class="form-label">Ingrese su apellido paterno</label>
+                    <input type="text" class="form-control" id="inputAppaterno" placeholder="ejemplo paterno">
+                </div>
+                <div class="col-12">
+                    <label for="inputApmaterno" class="form-label">Ingrese su apellido materno</label>
+                    <input type="text" class="form-control" id="inputApmaterno" placeholder="ejemplo materno">
+                </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Ingrese su fecha de nacimiento</label>
+          <input type="date" class="form-control" id="inputCity" placeholder="ejemplo fecha">
+        </div>
+        <div class="col-md-4">
+            <label for="inputGenero" class="form-label">Genero</label>
+            <select id="inputGenero" class="form-select" aria-selected="Genero placeholder">
+              <option>Masculino</option>
+              <option>Femenino</option>
+            </select>
+          </div>        
+        <div class="col-md-2">
+          <label for="inputCelular" class="form-label">Ingrese su Celular</label>
+          <input type="nummber" class="form-control" id="inputCelular" placeholder="ejemplo Celular">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Crear Carta</button>
+          </div>
+      </form>
+    </form>
+</body>
+</html>
