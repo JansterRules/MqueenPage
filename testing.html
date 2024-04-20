@@ -11,10 +11,65 @@
       <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
    </head>
    <body>
-    <div class="input-group">
-        <span class="input-group-text">Ingrese rut</span>
-        <input type="text" aria-label="First name" class="form-control" style="margin-left: 60px;">
-        <input type="text" aria-label="Last name" class="form-control" style="margin-left: 20px;">
+    <div class="container px-5 my-5">
+        <div class="container px-5 my-5">
+            <form id="contactForm" data-sb-form-api-token="API_TOKEN" class="justify-content-center">
+                <div class="d-inline-flex mb-3"> <!--  d: display, inline-flex: contenedor flex pero en linea -->
+                    <div class="form-floating me-3">
+                        <input class="form-control" id="rut" type="text" placeholder="RUT" data-sb-validations="required" />
+                        <label for="rut">RUT</label>
+                        <div class="invalid-feedback" data-sb-feedback="rut:required">RUT es requerido.</div>
+                    </div>
+                    <div class="form-floating">
+                        <input class="form-control" id="k" type="text" placeholder="K" data-sb-validations="required" />
+                        <label for="k">K</label>
+                        <div class="invalid-feedback" data-sb-feedback="k:required">Digito verificador es requerido.</div>
+                    </div>
+                </div>
+                
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="nombres" type="text" placeholder="Nombres" data-sb-validations="required" />
+                    <label for="nombres">Nombres</label>
+                    <div class="invalid-feedback" data-sb-feedback="nombres:required">Nombres es requerido.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="apellidos" type="text" placeholder="Apellidos" data-sb-validations="required" />
+                    <label for="apellidos">Apellidos</label>
+                    <div class="invalid-feedback" data-sb-feedback="apellidos:required">Apellidos es requerido.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="email" type="text" placeholder="Email" data-sb-validations="required" />
+                    <label for="email">Email</label>
+                    <div class="invalid-feedback" data-sb-feedback="email:required">Email es requerido.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="contrasena" type="text" placeholder="Contraseña" data-sb-validations="required" />
+                    <label for="contrasena">Contraseña</label>
+                    <div class="invalid-feedback" data-sb-feedback="contrasena:required">Contraseña es requerido.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="confirmarContrasena" type="text" placeholder="Confirmar contraseña" data-sb-validations="required" />
+                    <label for="confirmarContrasena">Confirmar contraseña</label>
+                    <div class="invalid-feedback" data-sb-feedback="confirmarContrasena:required">Confirmar contraseña es requerido.</div>
+                </div>
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                        <p>To activate this form, sign up at</p>
+                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                    </div>
+                </div>
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Registro</button>
+                </div>
+            </form>
+            
+        </div>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </div>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>
