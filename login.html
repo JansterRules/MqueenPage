@@ -1,107 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Ingresar en Makween</title>
-      <!-- Enlace a la hoja de estilos de Bootstrap -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-      <!-- Hoja de estilos personalizada -->
-      <link rel="stylesheet" type="text/css" href="style.css" />
-      <link rel="icon" type="image/jpg" href="Files/img/favicon.jpg" />
-   </head>
-   <body>
-      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-               <img src="Files/archivoImg/logo.jpg" alt="" width="80" height="74">
-            </a>            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar en Makween</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon" type="image/jpg" href="Files/img/favicon.jpg"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="Files/archivoImg/logo.jpg" alt="" width="80" height="74">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <a class="navbar-brand" href="index.html">Taller Makween</a>
-            </button>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="galeria.html">Galería</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="faq.html">Preguntas frecuentes</a>
-                  </li>
-               </ul>
-               <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="login.html">Ingresar</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="register.html">Registrar</a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </nav>
-      <!-- Importar footer -->
-      <!-- Formulario de inicio de sesión -->
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-1" style="background-color: rgb(223, 223, 223);"></div>
-            <div class="col-10">
-               <div class="container" style="margin-top:2%; margin-bottom:2%;">
-                  <div class="container mt-4">
-                     <div class="row justify-content-center">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="faq.html">Preguntas frecuentes</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="login.html">Ingresar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="register.html">Registrar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1" style="background-color: rgb(223, 223, 223);"></div>
+        <div class="col-10">
+            <div class="container" style="margin-top:2%; margin-bottom:2%;">
+                <div class="container mt-4">
+                    <div class="row justify-content-center">
                         <div class="col-lg-6 col-md-8 col-sm-10">
-                           <form>
-                              <div class="mb-3">
-                                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                              </div>
-                              <div class="mb-3">
-                                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                 <input type="password" class="form-control" id="exampleInputPassword1" minlength="8" required>
-                                 <div id="passwordHelpBlock" class="form-text">
-                                    La contraseña debe tener al menos 8 caracteres.
-                                 </div>
-                              </div>
-                              <div class="mb-3 form-check">
-                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                 <label class="form-check-label" for="exampleCheck1">No olvidar</label>
-                              </div>
-                              <button type="submit" class="btn btn-primary">Ingresar</button>
-                           </form>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" minlength="8" required>
+                                    <div id="passwordHelpBlock" class="form-text">
+                                        La contraseña debe tener al menos 8 caracteres.
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">No olvidar</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                            </form>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-1" style="background-color: rgb(223, 223, 223);">
-               <!-- Columna del body 3, para colocar anuncios etc -->
-            </div>
-         </div>
-      </div>
-      <div id="footer-placeholder"></div>
-      <!-- Importar footer -->
-      <!-- Incluir jQuery -->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <!-- Cargar el navbar y el footer con jQuery -->
-      <!-- Pie de página -->
-      <div class="container-fluid pieDePagina">
-         <h1 style="text-align: center; "> ¡Contáctanos en TALLER MQUEEN!</h1>
-         <div class="row">
-            <div class="col-12 col-md-12">
-               <ul>
-                  <li><a href="#" style="color: white;">Términos y condiciones</a></li>
-                  <li><a href="#" style="color: white;">Política de privacidad</a></li>
-                  <li><a href="#" style="color: white;">Contacto</a></li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <!-- Fin del Pie de página --> 
-   </body>
+        </div>
+        <div class="col-1" style="background-color: rgb(223, 223, 223);">
+        </div>
+    </div>
+</div>
+<div class="container-fluid pieDePagina">
+    <h1 style="text-align: center; "> ¡Contáctanos en TALLER MQUEEN!</h1>
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <ul>
+                <li><a href="#" style="color: white;">Términos y condiciones</a></li>
+                <li><a href="#" style="color: white;">Política de privacidad</a></li>
+                <li><a href="#" style="color: white;">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/JS/verificarFormulario.js"></script>
+</body>
 </html>
