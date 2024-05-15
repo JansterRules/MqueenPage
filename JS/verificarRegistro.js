@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     // Función para validar el formato del correo electrónico
     function validateEmail(email) {
-        var re = /\S+@\S+\.\S+/;
-        return re.test(email);
+        var requerimientos = /\S+@\S+\.\S+/;
+        return requerimientos.test(email);
     }
 });
