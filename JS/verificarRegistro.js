@@ -1,9 +1,10 @@
 $(document).ready(function() {
     $('#registerForm').submit(function(event) {
-        event.preventDefault(); // Evitar elementos en blanco
+        event.preventDefault(); // Evitar el envío del formulario por defecto
+        
+        $('.invalid-feedback').text(''); // Limpiar mensajes de error
+        $('.form-control').removeClass('is-invalid'); // Remover clases de invalid
 
-        $('.invalid-feedback').text(''); // Eliminar mensaje sde error
-        // Recibir valores dentro de cada input.
         var rut = $('#rut').val();
         var k = $('#k').val();
         var nombres = $('#nombres').val();
@@ -12,18 +13,15 @@ $(document).ready(function() {
         var contrasena = $('#contrasena').val();
         var confirmarContrasena = $('#confirmarContrasena').val();
 
-        // Siblings: Busca los elementos que sean "Hermanos", esto es
-        // debido a la jerarquía de los divs dentro del DOM.
-
         // Validar el RUT
-        if (rut.trim() === '') { // Elimina los espacios en blancos del campo para evitar que esté rellenado con espacios en blanco.
-            $('#rut').addClass('is-invalid'); // Selecciona y verifica el elemento "rut" desde el DOM
+        if (rut.trim() === '') {
+            $('#rut').addClass('is-invalid');
             $('#rut').siblings('.invalid-feedback').text('El RUT es requerido.');
             return;
         }
 
         // Validar el dígito verificador
-        if (k.trim() === '') { 
+        if (k.trim() === '') {
             $('#k').addClass('is-invalid');
             $('#k').siblings('.invalid-feedback').text('El dígito verificador es requerido.');
             return;
@@ -46,7 +44,7 @@ $(document).ready(function() {
         // Validar el formato de correo electrónico
         if (!validateEmail(email)) {
             $('#email').addClass('is-invalid');
-            $('#email').siblings('.invalid-feedback').text('Introduzca un correo electrónico válido');
+            $('#email').siblings('.invalid-feedback').text('Introduzca un correo electrónico válido.');
             return;
         }
 
@@ -64,17 +62,17 @@ $(document).ready(function() {
             return;
         }
 
-        // Validar que las contraseñas coincidan
         if (contrasena !== confirmarContrasena) {
             $('#confirmarContrasena').addClass('is-invalid');
             $('#confirmarContrasena').siblings('.invalid-feedback').text('Las contraseñas deben coincidir.');
             return;
         }
+
+        alert('Formulario validado con éxito.');
     });
 
-    // Función para validar el formato del correo electrónico
     function validateEmail(email) {
-        var requerimientos = /\S+@\S+\.\S+/;
-        return requerimientos.test(email);
+        var reqCaracterEmail = /\S+@\S+\.\S+/;
+        return reqCaracterEmail.test(email);
     }
 });

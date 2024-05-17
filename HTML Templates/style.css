@@ -1,9 +1,13 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
-  background-color: white;
-
+  height: 100%;
 }
+
+ .container-fluid {
+    padding-top: 1rem;
+ }
+
 .fondosBarras {
   font-size: small;
   font-style: italic;
@@ -15,7 +19,8 @@ body {
 }
 
 .pieDePagina {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #ffffff;
   font-size: large;
   background-color: black;
@@ -29,7 +34,31 @@ body {
   text-align: center;
 }
 
-.colorFondos{
+.colorFondos {
   background-color: rgb(216, 216, 216);
+}
 
+.invalid-feedback {
+  color: red; /* Color del texto del mensaje de error */
+  font-size: 14px; /* Tamaño de fuente del mensaje de error */
+  margin-top: 5px; /* Espaciado superior del mensaje de error */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+#footerDiv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }

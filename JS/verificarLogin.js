@@ -28,6 +28,8 @@ $(document).ready(function() {
     }
 });
 
+
+// Eliminar mensajes predeterminados del bootstrap (Obtenido de stackoverflow)
 (function() {
     'use strict';
     var forms = document.querySelectorAll('.needs-validation');

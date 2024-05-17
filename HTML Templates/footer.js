@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var footerDiv = document.getElementById('footerDiv'); // Elemento de la clase para el div.
-    if (footerDiv) {
+    if (footerDiv) { // Cumplir con True
         footerDiv.innerHTML = `
         <div class="container-fluid pieDePagina">
             <h1 style="text-align: center;">¡Contáctanos en TALLER MQUEEN!</h1>

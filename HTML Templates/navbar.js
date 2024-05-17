@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() { // Elementos bootstrap
     var head = document.head; // Implementación en el head
     var linkBootstrap = document.createElement("link");
     linkBootstrap.rel = "stylesheet";
