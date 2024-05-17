@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $('#registerForm').submit(function(event) {
-        event.preventDefault(); // Evitar elementos en blanco
+        event.preventDefault(); // Evitar el envío del formulario por defecto
 
-        $('.invalid-feedback').text(''); // Eliminar mensaje sde error
+        $('.invalid-feedback').text(''); // Eliminar mensajes de error
         // Recibir valores dentro de cada input.
         var rut = $('#rut').val();
         var k = $('#k').val();
@@ -11,9 +11,6 @@ $(document).ready(function() {
         var email = $('#email').val();
         var contrasena = $('#contrasena').val();
         var confirmarContrasena = $('#confirmarContrasena').val();
-
-        // Siblings: Busca los elementos que sean "Hermanos", esto es
-        // debido a la jerarquía de los divs dentro del DOM.
 
         // Validar el RUT
         if (rut.trim() === '') { // Elimina los espacios en blancos del campo para evitar que esté rellenado con espacios en blanco.
@@ -74,7 +71,7 @@ $(document).ready(function() {
 
     // Función para validar el formato del correo electrónico
     function validateEmail(email) {
-        var requerimientos = /\S+@\S+\.\S+/;
-        return requerimientos.test(email);
+        var emailPattern = /\S+@\S+\.\S+/;
+        return emailPattern.test(email);
     }
 });
