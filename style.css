@@ -33,3 +33,15 @@ body {
   background-color: rgb(216, 216, 216);
 
 }
+
+.invalid-feedback {
+  color: red; /* Color del texto del mensaje de error */
+  font-size: 14px; /* Tamaño de fuente del mensaje de error */
+  margin-top: 5px; /* Espaciado superior del mensaje de error */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
