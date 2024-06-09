@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
-from .models import Alumno,Genero
-# Create your views here.
+from .models import Vehiculo
 
 def index(request):
     context={}
@@ -38,3 +37,7 @@ def register(request):
 def regvacante(request):
     context={}
     return render(request, 'taller_makween/regvacante.html',)
+def crud(request):
+    vehiculos = Vehiculo.objects.all()
+    context = {'vehiculos': vehiculos}
+    return render(request, 'taller/vehiculos_list.html', context)
