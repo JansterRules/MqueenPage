@@ -1,0 +1,9 @@
+<form method="POST" action="{% url 'vehiculosUpdate' %}">
+    {% csrf_token %}
+    <input type="hidden" name="placa" value="{{ vehiculo.placa }}">
+    <label for="marca">Marca:</label>
+    <input type="text" name="marca" id="marca" value="{{ vehiculo.marca }}" required>
+    <label for="modelo">Modelo:</label>
+    <input type="text" name="modelo" id="modelo" value="{{ vehiculo.modelo }}" required>
+    <button type="submit">Actualizar</button>
+</form>

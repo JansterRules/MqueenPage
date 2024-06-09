@@ -12,5 +12,9 @@ urlpatterns=[
     path('register', views.register, name='register'),
     path('regvacante', views.regvacante, name='regvacante'),
     path('crud', views.crud, name='crud'),
+    path('vehiculosAdd', views.vehiculosAdd, name='vehiculosAdd'),
+    path('vehiculos_del/<str:pk>', views.vehiculos_del, name='vehiculos_del'),
+    path('vehiculos_findEdit/<str:pk>', views.vehiculos_findEdit, name='vehiculos_findEdit'),
+    path('vehiculosUpdate', views.vehiculosUpdate, name='vehiculosUpdate'),
 
 ]
