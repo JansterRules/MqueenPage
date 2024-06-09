@@ -1,5 +1,4 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
 from .models import Vehiculo
 
 def index(request):
@@ -48,7 +47,8 @@ def vehiculosAdd(request):
         placa = request.POST['placa']
         marca = request.POST['marca']
         modelo = request.POST['modelo']
-        Vehiculo.objects.create(placa=placa, marca=marca, modelo=modelo)
+        año = request.POST['año']
+        Vehiculo.objects.create(placa=placa, marca=marca, modelo=modelo, año=año)
         return redirect('crud')
     return render(request, 'taller_makween/vehiculos_add.html')
 
@@ -61,13 +61,16 @@ def vehiculos_findEdit(request, pk):
     vehiculo = Vehiculo.objects.get(placa=pk)
     context = {'vehiculo': vehiculo}
     return render(request, 'taller_makween/vehiculos_edit.html', context)
+
 def vehiculosUpdate(request):
     if request.method == 'POST':
         placa = request.POST['placa']
         marca = request.POST['marca']
         modelo = request.POST['modelo']
+        año = request.POST['año']
         vehiculo = Vehiculo.objects.get(placa=placa)
         vehiculo.marca = marca
         vehiculo.modelo = modelo
+        vehiculo.año = año
         vehiculo.save()
         return redirect('crud')

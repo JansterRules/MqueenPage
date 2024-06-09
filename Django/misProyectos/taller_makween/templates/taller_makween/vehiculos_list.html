@@ -1,13 +1,10 @@
-{% if mensaje %}
-    <div id="idMensajes">{{ mensaje }}</div>
-{% endif %}
-
 {% if vehiculos %}
     <table>
         <tr>
             <th>Placa</th>
             <th>Marca</th>
             <th>Modelo</th>
+            <th>Año</th>
             <th>Acciones</th>
         </tr>
         {% for vehiculo in vehiculos %}
@@ -15,6 +12,7 @@
                 <td>{{ vehiculo.placa }}</td>
                 <td>{{ vehiculo.marca }}</td>
                 <td>{{ vehiculo.modelo }}</td>
+                <td>{{ vehiculo.año }}</td>
                 <td>
                     <a href="{% url 'vehiculos_findEdit' vehiculo.placa %}">Modificar</a>
                     <a href="{% url 'vehiculos_del' vehiculo.placa %}">Eliminar</a>

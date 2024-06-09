@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Navegar al directorio del proyecto Django
+cd /path/to/Django/misProyectos
+
+# Activar el entorno virtual
+source myvenv/Scripts/activate
+
+echo "Entorno virtual activado."
