@@ -1,0 +1,54 @@
+{% extends 'taller_makween/base.html' %}
+
+{% load static %}
+
+{% block title %} Makween⚡Taller mecánico {% endblock %}
+
+{% block content %}
+      <form>
+         <div class="input-group">
+            <span class="input-group-text" style="background-color:white">Ingrese rut</span>
+            <input type="text" aria-label="First name" class="form-control" style="margin-left: 60px;">
+            <input type="text" aria-label="Last name" class="form-control" style="margin-left: 20px;">
+         </div>
+         <div class="row-3">
+            <div class="col-md-6">
+               <label for="inputNombre" class="form-label">Ingrese sus Nombres:</label>
+               <input type="text" class="form-control" id="inputNombre" placeholder="ejemplo nombre">
+            </div>
+         </div>
+         <div class="row-">
+            <div class="col-12">
+               <label for="inputAppaterno" class="form-label">Ingrese su apellido paterno</label>
+               <input type="text" class="form-control" id="inputAppaterno" placeholder="ejemplo paterno">
+            </div>
+            <div class="col-12">
+               <label for="inputApmaterno" class="form-label">Ingrese su apellido materno</label>
+               <input type="text" class="form-control" id="inputApmaterno" placeholder="ejemplo materno">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <label for="inputCity" class="form-label">Ingrese su fecha de nacimiento</label>
+               <input type="date" class="form-control" id="inputCity" placeholder="ejemplo fecha">
+            </div>
+            <div class="col-md-4">
+               <label for="inputGenero" class="form-label">Genero</label>
+               <select id="inputGenero" class="form-select" aria-selected="Genero placeholder">
+                  <option>Masculino</option>
+                  <option>Femenino</option>
+               </select>
+            </div>
+            <div class="col-md-2">
+               <label for="inputCelular" class="form-label">Ingrese su Celular</label>
+               <input type="number" class="form-control" id="inputCelular" placeholder="ejemplo Celular">
+            </div>
+         </div>
+         <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+         </div>
+         <div class="col-12">
+            <button type="submit" class="btn btn-primary">Crear Carta</button>
+         </div>
+      </form>
+{% endblock %}

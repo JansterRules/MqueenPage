@@ -1,0 +1,65 @@
+{% extends 'taller_makween/base.html' %}
+
+{% load static %}
+
+{% block title %} Makween⚡Taller mecánico {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-1" style="background-color: rgb(223, 223, 223);"></div>
+      <div class="col-10">
+         <div class="container" style="margin-top:2%; margin-bottom:2%;">
+            <div class="container mt-4">
+               <div class="row justify-content-center">
+                  <div class="col-lg-6 col-md-8 col-sm-10">
+                     <form id="registerForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                           <label for="rut" class="form-label">RUT</label>
+                           <input type="text" class="form-control" id="rut" required>
+                           <div class="invalid-feedback">El RUT es requerido.</div>
+                        </div>
+                        <div class="mb-3">
+                           <label for="k" class="form-label">Dígito Verificador</label>
+                           <input type="text" class="form-control" id="k" required>
+                           <div class="invalid-feedback">El dígito verificador es requerido.</div>
+                        </div>
+                        <div class="mb-3">
+                           <label for="nombres" class="form-label">Nombres</label>
+                           <input type="text" class="form-control" id="nombres" required>
+                           <div class="invalid-feedback">Ingrese su nombre.</div>
+                        </div>
+                        <div class="mb-3">
+                           <label for="apellidos" class="form-label">Apellidos</label>
+                           <input type="text" class="form-control" id="apellidos" required>
+                           <div class="invalid-feedback">Ingrese sus apellidos.</div>
+                        </div>
+                        <div class="mb-3">
+                           <label for="email" class="form-label">Email</label>
+                           <input type="email" class="form-control" id="email" required>
+                           <div class="invalid-feedback">Introduzca un correo electrónico válido.</div>
+                        </div>
+                        <div class="mb-3">
+                           <label for="contrasena" class="form-label">Contraseña</label>
+                           <input type="password" class="form-control" id="contrasena" required>
+                           <div class="invalid-feedback">La contraseña es requerida.</div>
+                        </div>
+                        <div class="mb-3">
+                           <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
+                           <input type="password" class="form-control" id="confirmarContrasena" required>
+                           <div class="invalid-feedback">Las contraseñas deben coincidir.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-1" style="background-color: rgb(223, 223, 223);"></div>
+   </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="JS/verificarLogin.js"></script>
+
+{% endblock %}
