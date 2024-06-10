@@ -1,11 +1,26 @@
-<form method="POST" action="{% url 'vehiculosUpdate' %}">
-    {% csrf_token %}
-    <input type="hidden" name="placa" value="{{ vehiculo.placa }}">
-    <label for="marca">Marca:</label>
-    <input type="text" name="marca" id="marca" value="{{ vehiculo.marca }}" required>
-    <label for="modelo">Modelo:</label>
-    <input type="text" name="modelo" id="modelo" value="{{ vehiculo.modelo }}" required>
-    <label for="año">Año:</label>
-    <input type="number" name="año" id="año" value="{{ vehiculo.año }}" required>
-    <button type="submit">Actualizar</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Vehículo</title>
+</head>
+<body>
+    <h1>Editar Vehículo</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" value="{{ vehiculo.placa }}" readonly><br>
+
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" value="{{ vehiculo.marca }}"><br>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" value="{{ vehiculo.modelo }}"><br>
+
+        <label for="año">Año:</label>
+        <input type="number" id="año" name="año" value="{{ vehiculo.año }}"><br>
+
+        <button type="submit">Guardar</button>
+        <a href="{% url 'crud' %}">Cancelar</a>
+    </form>
+</body>
+</html>

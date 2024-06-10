@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Vehiculo
 
 def index(request):
@@ -49,16 +49,20 @@ def vehiculosAdd(request):
         modelo = request.POST['modelo']
         año = request.POST['año']
         Vehiculo.objects.create(placa=placa, marca=marca, modelo=modelo, año=año)
-        return crud(request) # Activar renderizardo
+        return redirect('crud')
+
     return render(request, 'taller_makween/vehiculos_add.html')
 
 def vehiculos_del(request, pk):
-    vehiculo = Vehiculo.objects.get(placa=pk)
-    vehiculo.delete()
-    return crud(request)  # Activar renderizardo
+    vehiculo = get_object_or_404(Vehiculo, placa=pk)
+    if request.method == 'POST':
+        vehiculo.delete()
+        return redirect('crud')
+    context = {'vehiculo': vehiculo}
+    return render(request, 'taller_makween/vehiculos_confirm_delete.html', context)
 
 def vehiculos_findEdit(request, pk):
-    vehiculo = Vehiculo.objects.get(placa=pk)
+    vehiculo = get_object_or_404(Vehiculo, placa=pk)
     context = {'vehiculo': vehiculo}
     return render(request, 'taller_makween/vehiculos_edit.html', context)
 
@@ -68,10 +72,10 @@ def vehiculosUpdate(request):
         marca = request.POST['marca']
         modelo = request.POST['modelo']
         año = request.POST['año']
-        vehiculo = Vehiculo.objects.get(placa=placa)
+        vehiculo = get_object_or_404(Vehiculo, placa=placa)
         vehiculo.marca = marca
         vehiculo.modelo = modelo
         vehiculo.año = año
         vehiculo.save()
-        return crud(request)  # Renderizar la vista crud
+        return redirect('crud')
     return render(request, 'taller_makween/vehiculos_edit.html')
