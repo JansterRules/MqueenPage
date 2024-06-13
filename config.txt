@@ -1,6 +1,6 @@
 
-home = C:\Users\MyDream\AppData\Local\Programs\Python
+home = C:\Users\hunte\AppData\Local\Programs\Python
 include-system-site-packages = false
-version = 3.12.4
-executable = C:\Users\MyDream\AppData\Local\Programs\Python\Python312\python.exe
-command = C:\Users\MyDream\AppData\Local\Programs\Python\Python312\python.exe -m venv C:\misProyectos\myvenv
+version = 3.11.3
+executable = C:\Users\hunte\AppData\Local\Programs\Python\Python311\python.exe
+command = C:\Users\hunte\AppData\Local\Programs\Python\Python311\python.exe -m venv C:\misProyectos\myvenv

@@ -19,7 +19,7 @@
                         <!-- Card 1-->
                         <div class="col">
                            <div class="card">
-                              <img src="Files/carrusel/i1.jpg" class="card-img-top" alt="Diagnóstico del Problema">
+                              <img src="{% static '/IMG/carrusel/i1.jpg' %}" class="card-img-top" alt="Diagnóstico del Problema">
                               <div class="card-body">
                                  <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 1" data-bs-content="El motor presentaba un fallo en el sistema de inyección de combustible, causando una mezcla rica en la relación aire-combustible.">ℹ️</a></h5>
                                  <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 1" data-bs-content="El diagnóstico fue realizado por el mecánico certificado Juan Pérez, quien cuenta con más de 15 años de experiencia en reparaciones de motores.">ℹ️</a></h5>
@@ -31,7 +31,7 @@
                         <!-- Card 2 -->
                         <div class="col">
                            <div class="card">
-                              <img src="Files/carrusel/i2.jpg" class="card-img-top" alt="Diagnóstico del Problema">
+                              <img src="{% static '/IMG/carrusel/i2.jpg'%}" class="card-img-top" alt="Diagnóstico del Problema">
                               <div class="card-body">
                                  <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 2" data-bs-content="La suspensión delantera presentaba desgaste en los amortiguadores, causando una conducción inestable.">ℹ️</a></h5>
                                  <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 2" data-bs-content="El mecánico especializado en suspensión, María González, realizó la inspección y reemplazo de los amortiguadores delanteros.">ℹ️</a></h5>
@@ -43,7 +43,7 @@
                         <!-- Card 3 -->
                         <div class="col">
                            <div class="card">
-                              <img src="Files/carrusel/i3.jpg" class="card-img-top" alt="Diagnóstico del Problema">
+                              <img src="{% static '/IMG/carrusel/i3.jpg'%}" class="card-img-top" alt="Diagnóstico del Problema">
                               <div class="card-body">
                                  <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 3" data-bs-content="El sistema de frenos traseros mostraba desgaste en las pastillas, lo que provocaba una menor eficacia de frenado.">ℹ️</a></h5>
                                  <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 3" data-bs-content="El mecánico experto en frenos, José Ramírez, realizó la inspección y sustitución de las pastillas de freno traseras.">ℹ️</a></h5>
@@ -55,7 +55,7 @@
                         <!-- Card 4 -->
                         <div class="col">
                            <div class="card">
-                              <img src="Files/carrusel/i4.jpg" class="card-img-top" alt="Diagnóstico del Problema">
+                              <img src="{% static '/IMG/carrusel/i4.jpg'%}" class="card-img-top" alt="Diagnóstico del Problema">
                               <div class="card-body">
                                  <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 4" data-bs-content="Se identificó una fuga de aceite en el motor debido a un sello de válvula defectuoso.">ℹ️</a></h5>
                                  <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 4" data-bs-content="El mecánico certificado Luis Martínez llevó a cabo la reparación del sello de la válvula y la limpieza del motor.">ℹ️</a></h5>
@@ -67,7 +67,7 @@
                         <!-- Card 5 -->
                         <div class="col">
                            <div class="card">
-                              <img src="Files/carrusel/i5.jpg" class="card-img-top" alt="Diagnóstico del Problema">
+                              <img src="{% static '/IMG/carrusel/i5.jpg'%}" class="card-img-top" alt="Diagnóstico del Problema">
                               <div class="card-body">
                                  <h5 class="card-title">Diagnóstico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Diagnóstico del Problema 5" data-bs-content="Se detectó un problema en el sistema de encendido debido a un fallo en la bobina de encendido, lo que causaba una combustión irregular.">ℹ️</a></h5>
                                  <h5 class="card-title">Mecánico <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="hover" title="Mecánico 5" data-bs-content="El mecánico especialista en sistemas de encendido, Pedro García, fue responsable de reemplazar la bobina de encendido y ajustar el sistema.">ℹ️</a></h5>
@@ -84,7 +84,6 @@
             </div>
          </div>
       </div>
-      <div id="footer-placeholder"></div>
       <script>
          var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
          var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
