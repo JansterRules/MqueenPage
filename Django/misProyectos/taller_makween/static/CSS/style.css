@@ -46,11 +46,6 @@ body, html {
   margin-top: 5px;
 }
 
-#footerDiv {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
 
 
 .clearfix::after {

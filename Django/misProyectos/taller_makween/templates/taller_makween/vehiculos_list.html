@@ -1,3 +1,8 @@
+{% load static %}
+
+{% block title %} Makween⚡Taller mecánico {% endblock %}
+
+{% block content %}
 {% if vehiculos %}
     <table>
         <tr>
@@ -21,3 +26,4 @@
         {% endfor %}
     </table>
 {% endif %}
+{% endblock %}
