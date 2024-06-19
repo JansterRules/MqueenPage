@@ -9,6 +9,15 @@ class Vehiculo(models.Model):
     def __str__(self):
         return self.placa
 
+
+class Mecanico(models.Model):
+    rut = models.CharField(max_length=8, primary_key=True)
+    dv = models.CharField(max_length=1)
+    nombres = models.CharField(max_length=60)
+    apellidos = models.CharField(max_length=60)
+    email = models.CharField(max_length=60)
+    contraseña = models.CharField(max_length=60)
+
 '''
 NO OLVIDAR!!!!:
 

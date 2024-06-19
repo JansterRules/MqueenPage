@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Editar Mecanico</h1>
+    <br>
+
+    <button type="button">
+        <a href="{% url 'Mecanico_add' %}"></href>
+    </button>
+
+    <div id="idMensajes">
+        {% if mensaje %}
+            {{mensaje}}
+        {% endif %}
+    </div>
+    <table>
+        {% if mecanicos %}
+            <th>rut</th>
+            <th>dv</th>
+            <th>nombres</th>
+            <th>apellidos</th>
+            <th>email</th>
+            <th>contraseña</th>
+            {% for x in Mecanico %}
+                <tr>
+                    <td>{{ x.Mecanico }}
+                    <td> <a href="{% url 'Mecanico_edit' pk=x.id_Mecanico %}">Editar</a>
+                </tr>
+    </table>
+</body>
+</html>

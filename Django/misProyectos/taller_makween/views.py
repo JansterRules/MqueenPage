@@ -79,3 +79,10 @@ def vehiculosUpdate(request):
         vehiculo.save()
         return redirect('crud')
     return render(request, 'taller_makween/vehiculos_edit.html')
+
+def crud_mecanicos(request):
+
+    mecanicos=Mecanico.objects.all()
+    context ={'mecanicos':mecanicos}
+    print("probando views.py crudmecanicos")
+    return render(request,"taller_makween/mecanico_list.html",context)
