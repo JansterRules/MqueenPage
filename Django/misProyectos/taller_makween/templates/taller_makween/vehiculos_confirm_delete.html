@@ -1,13 +1,51 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Eliminar⚡Taller mecánico {% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index">
+                <img src="{% static 'IMG/archivoImg/logo.jpg' %}" alt="" width="70" height="70">
+            </a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="crud">CRUD - Makween⚡Taller mecánico</a>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'crud' %}">CRUD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'vehiculosAdd' %}">Agregar vehiculo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-{% block title %} ⚡ Eliminar Vehiculo {% endblock %}
-
-{% block content %}
-    <h1>Confirmar Eliminación del Vehículo</h1>
-    <p>¿Estás seguro que deseas eliminar el vehículo con placa {{ vehiculo.placa }}?</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Eliminar</button>
-        <a href="{% url 'crud' %}">Cancelar</a>
-    </form>
-{% endblock %}
+    <!-- contenido dinámico -->
+    <div class="container mt-5">
+        {% block content %}
+            <h1 class="mb-4">Confirmar Eliminación del Vehículo</h1>
+            <p>¿Estás seguro que deseas eliminar el vehículo con placa <strong>{{ vehiculo.placa }}</strong>?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a href="{% url 'crud' %}" class="btn btn-secondary">Cancelar</a>
+            </form>
+        {% endblock %}
+    </div>
+</body>
+</html>
