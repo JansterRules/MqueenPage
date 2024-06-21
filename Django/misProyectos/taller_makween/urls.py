@@ -15,9 +15,11 @@ urlpatterns = [
     path('vehiculosAdd', views.vehiculosAdd, name='vehiculosAdd'),
     path('vehiculos_del/<str:pk>', views.vehiculos_del, name='vehiculos_del'),
     path('vehiculos_findEdit/<str:pk>', views.vehiculos_findEdit, name='vehiculos_findEdit'),
-    path('vehiculosUpdate/<str:pk>', views.vehiculosUpdate, name='vehiculosUpdate'),
     path('crud_Mecanicos', views.crud_mecanicos, name='crud_Mecanicos'),
     path('mecanicoAdd', views.mecanico_add, name='mecanicoadd'),
     path('mecanico_del/<str:pk>', views.mecanico_del, name='mecanico_del'),
     path('mecanico_edit/<str:pk>', views.mecanico_edit, name='mecanico_edit'),
 ]
+
+# Se elimino:     path('vehiculosUpdate/<str:pk>', views.vehiculosUpdate, name='vehiculosUpdate'),
+# Por temas de edición en el CRUD.

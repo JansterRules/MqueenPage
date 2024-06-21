@@ -1,25 +1,65 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}⚡Modificar Vehículo {% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index">
+                <img src="{% static 'IMG/archivoImg/logo.jpg' %}" alt="" width="70" height="70">
+            </a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="crud">CRUD - Makween⚡Taller mecánico</a>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'crud' %}">CRUD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'vehiculosAdd' %}">Agregar vehículo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        {% block content %}
+        <h1 class="mb-4">Modificar Vehículo</h1>
+        <form method="post" action="{% url 'vehiculos_findEdit' vehiculo.placa %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="placa" class="form-label">Placa:</label>
+                <input type="text" class="form-control" id="placa" name="placa" value="{{ vehiculo.placa }}" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="marca" class="form-label">Marca:</label>
+                <input type="text" class="form-control" id="marca" name="marca" value="{{ vehiculo.marca }}">
+            </div>
+            <div class="mb-3">
+                <label for="modelo" class="form-label">Modelo:</label>
+                <input type="text" class="form-control" id="modelo" name="modelo" value="{{ vehiculo.modelo }}">
+            </div>
+            <div class="mb-3">
+                <label for="año" class="form-label">Año:</label>
+                <input type="number" class="form-control" id="año" name="año" value="{{ vehiculo.año }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="{% url 'crud' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+        {% endblock %}
+    </div>
 
-{% block title %}⚡ Editar Vehiculo {% endblock %}
-
-{% block content %}
-    <h1>Editar Vehículo</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="placa">Placa:</label>
-        <input type="text" id="placa" name="placa" value="{{ vehiculo.placa }}" readonly><br>
-
-        <label for="marca">Marca:</label>
-        <input type="text" id="marca" name="marca" value="{{ vehiculo.marca }}"><br>
-
-        <label for="modelo">Modelo:</label>
-        <input type="text" id="modelo" name="modelo" value="{{ vehiculo.modelo }}"><br>
-
-        <label for="año">Año:</label>
-        <input type="number" id="año" name="año" value="{{ vehiculo.año }}"><br>
-
-        <button type="submit">Guardar</button>
-        <a href="{% url 'crud' %}">Cancelar</a>
-    </form>
-{% endblock %}
-
+</body>
+</html>

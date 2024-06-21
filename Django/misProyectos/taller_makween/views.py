@@ -114,3 +114,18 @@ def mecanico_edit(request, pk):
 
     context = {'mecanico': mecanico}
     return render(request, 'taller_makween/mecanico_edit.html', context)
+
+def vehiculos_findEdit(request, pk): # Se desarrollo para evitar el error en la actualización de valores dentro del CRUD.
+    # Es una combinación entre 'vehiculos_findEdit' y 'vehiculosUpdate'
+    vehiculo = get_object_or_404(Vehiculo, placa=pk)
+    if request.method == 'POST':
+        marca = request.POST['marca']
+        modelo = request.POST['modelo']
+        año = request.POST['año']
+        vehiculo.marca = marca
+        vehiculo.modelo = modelo
+        vehiculo.año = año
+        vehiculo.save()
+        return redirect('crud')
+    context = {'vehiculo': vehiculo}
+    return render(request, 'taller_makween/vehiculos_edit.html', context)

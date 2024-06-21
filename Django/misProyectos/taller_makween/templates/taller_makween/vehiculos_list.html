@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Makween⚡Taller mecánico {% endblock %}</title>
+    <title>{% block title %}⚡CRUD{% endblock %}</title>
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
@@ -39,6 +39,7 @@
     <div class="container mt-5">
         {% block content %}
         {% if vehiculos %}
+        <h1>CRUD</h1>
             <div class="table-responsive">
                 <table class="table table-bordered table-hover">
                     <thead class="table-dark">
