@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Vehiculo
+from .models import Vehiculo, Mecanico
 
 def index(request):
     context = {}
@@ -81,8 +81,36 @@ def vehiculosUpdate(request):
     return render(request, 'taller_makween/vehiculos_edit.html')
 
 def crud_mecanicos(request):
-
-    mecanicos=Mecanico.objects.all()
-    context ={'mecanicos':mecanicos}
+    mecanicos = Mecanico.objects.all()
+    context = {'mecanicos': mecanicos}
     print("probando views.py crudmecanicos")
-    return render(request,"taller_makween/mecanico_list.html",context)
+    return render(request, "taller_makween/mecanico_list.html", context)
+
+def mecanico_add(request):
+    if request.method == 'POST':
+        nombre = request.POST['nombre']
+        apellido = request.POST['apellido']
+        especialidad = request.POST['especialidad']
+        Mecanico.objects.create(nombre=nombre, apellido=apellido, especialidad=especialidad)
+        return redirect('crud_Mecanicos')
+
+    return render(request, 'taller_makween/mecanico_add.html')
+
+def mecanico_del(request, pk):
+    mecanico = get_object_or_404(Mecanico, id=pk)
+    if request.method == 'POST':
+        mecanico.delete()
+        return redirect('crud_Mecanicos')
+    context = {'mecanico': mecanico}
+    return render(request, 'taller_makween/mecanico_confirm_delete.html', context)
+def mecanico_edit(request, pk):
+    mecanico = get_object_or_404(Mecanico, id=pk)
+    if request.method == 'POST':
+        mecanico.nombre = request.POST['nombre']
+        mecanico.apellido = request.POST['apellido']
+        mecanico.especialidad = request.POST['especialidad']
+        mecanico.save()
+        return redirect('crud_Mecanicos')
+
+    context = {'mecanico': mecanico}
+    return render(request, 'taller_makween/mecanico_edit.html', context)

@@ -4,12 +4,14 @@ Proyecto semestral para la asignatura PGY3121
 
 ## Tabla de Contenidos
 
-1. [Descripción](#descripción)
-2. [Estructura del Proyecto](#estructura-del-proyecto)
-3. [Configuración](#configuración)
-4. [Instalación](#instalación)
-5. [Uso](#uso)
-6. [URLs del Proyecto](#urls-del-proyecto)
+- [Taller Makween](#taller-makween)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Descripción](#descripción)
+  - [Estructura del Proyecto](#estructura-del-proyecto)
+  - [Configuración](#configuración)
+  - [Instalación](#instalación)
+  - [Uso](#uso)
+  - [URLs del Proyecto](#urls-del-proyecto)
 
 ## Descripción
 
@@ -84,16 +86,16 @@ python manage.py runserver
 ## URLs del Proyecto
 
 - [Vista index](http://127.0.0.1:8000/)
-- [Vista base](http://127.0.0.1:8000/base/)
-- [Vista aboutus](http://127.0.0.1:8000/aboutus/)
-- [Vista Checkout](http://127.0.0.1:8000/checkout/)
-- [Vista faq](http://127.0.0.1:8000/faq/)
-- [Vista galeria](http://127.0.0.1:8000/galeria/)
-- [Vista login](http://127.0.0.1:8000/login/)
-- [Vista register](http://127.0.0.1:8000/register/)
-- [Vista regvacante](http://127.0.0.1:8000/regvacante/)
-- [Vista crud](http://127.0.0.1:8000/crud/)
-- [Vista vehiculosAdd](http://127.0.0.1:8000/vehiculosAdd/)
-- [Vista vehiculos_del](http://127.0.0.1:8000/vehiculos_del/<placa>/)
-- [Vista vehiculos_findEdit](http://127.0.0.1:8000/vehiculos_findEdit/<placa>/)
-- [Vista vehiculosUpdate](http://127.0.0.1:8000/vehiculosUpdate/)
+- [Vista base](http://127.0.0.1:8000/base)
+- [Vista aboutus](http://127.0.0.1:8000/aboutus)
+- [Vista Checkout](http://127.0.0.1:8000/checkout)
+- [Vista faq](http://127.0.0.1:8000/faq)
+- [Vista galeria](http://127.0.0.1:8000/galeria)
+- [Vista login](http://127.0.0.1:8000/login)
+- [Vista register](http://127.0.0.1:8000/register)
+- [Vista regvacante](http://127.0.0.1:8000/regvacante)
+- [Vista crud](http://127.0.0.1:8000/crud)
+- [Vista vehiculosAdd](http://127.0.0.1:8000/vehiculosAdd)
+- [Vista vehiculos_del](http://127.0.0.1:8000/vehiculos_del/<placa>)
+- [Vista vehiculos_findEdit](http://127.0.0.1:8000/vehiculos_findEdit/<placa>)
+- [Vista vehiculosUpdate](http://127.0.0.1:8000/vehiculosUpdate)
