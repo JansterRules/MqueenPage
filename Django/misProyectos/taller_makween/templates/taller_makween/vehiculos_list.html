@@ -1,29 +1,83 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Makween⚡Taller mecánico {% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index">
+                <img src="{% static 'IMG/archivoImg/logo.jpg' %}" alt="" width="70" height="70">
+            </a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="crud">CRUD - Makween⚡Taller mecánico</a>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login">Ingresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="register">Registrar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-{% block title %} Makween⚡Taller mecánico {% endblock %}
+    <!-- contenido dinámico -->
+    <div class="container mt-5">
+        {% block content %}
+        {% if vehiculos %}
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Placa</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Año</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for vehiculo in vehiculos %}
+                            <tr>
+                                <td>{{ vehiculo.placa }}</td>
+                                <td>{{ vehiculo.marca }}</td>
+                                <td>{{ vehiculo.modelo }}</td>
+                                <td>{{ vehiculo.año }}</td>
+                                <td>
+                                    <a href="{% url 'vehiculos_findEdit' vehiculo.placa %}" class="btn btn-primary btn-sm">Modificar</a>
+                                    <a href="{% url 'vehiculos_del' vehiculo.placa %}" class="btn btn-danger btn-sm">Eliminar</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-warning" role="alert">
+                No hay vehículos disponibles.
+            </div>
+        {% endif %}
+        {% endblock %}
+    </div>
 
-{% block content %}
-{% if vehiculos %}
-    <table>
-        <tr>
-            <th>Placa</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Año</th>
-            <th>Acciones</th>
-        </tr>
-        {% for vehiculo in vehiculos %}
-            <tr>
-                <td>{{ vehiculo.placa }}</td>
-                <td>{{ vehiculo.marca }}</td>
-                <td>{{ vehiculo.modelo }}</td>
-                <td>{{ vehiculo.año }}</td>
-                <td>
-                    <a href="{% url 'vehiculos_findEdit' vehiculo.placa %}">Modificar</a>
-                    <a href="{% url 'vehiculos_del' vehiculo.placa %}">Eliminar</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
-{% endif %}
-{% endblock %}
+</body>
+</html>
