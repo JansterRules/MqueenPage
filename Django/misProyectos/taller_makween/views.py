@@ -88,10 +88,13 @@ def crud_mecanicos(request):
 
 def mecanico_add(request):
     if request.method == 'POST':
-        nombre = request.POST['nombre']
-        apellido = request.POST['apellido']
-        especialidad = request.POST['especialidad']
-        Mecanico.objects.create(nombre=nombre, apellido=apellido, especialidad=especialidad)
+        rut = request.POST['rut']
+        dv = request.POST['dv']
+        nombres = request.POST['nombres']
+        apellidos = request.POST['apellidos']
+        email = request.POST['email']
+        contrasena = request.POST['contrasena']
+        Mecanico.objects.create(rut=rut, dv=dv, nombres=nombres, apellidos=apellidos, email=email, contrasena=contrasena)
         return redirect('crud_Mecanicos')
     return render(request, 'taller_makween/mecanico_add.html')
 
