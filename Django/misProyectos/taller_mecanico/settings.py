@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-es!7l%l@z)@7tznwzj30sn91c6!hy)kz05atyahl8^@h&hw9qr
 DEBUG = True
 
 ALLOWED_HOSTS = []
-LOGIN_REDIRECT_URL = '/index.html'
+LOGIN_REDIRECT_URL = '/admin' # PÁGINA SIGUIETNE AL LOGEAR (Y VERIRICAR)
 LOGOUT_REDIRECT_URL = '/index.html'
 
 # Application definition

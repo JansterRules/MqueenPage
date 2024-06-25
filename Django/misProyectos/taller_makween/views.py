@@ -40,7 +40,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')
+                return redirect('index')
     else:
         form = AuthenticationForm()
     return render(request, 'registration/login.html', {'form': form})
@@ -56,7 +56,7 @@ def register(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')
+                return redirect('index')
     else:
         form = RegisterForm()
     return render(request, 'registration/register.html', {'form': form})
@@ -66,7 +66,7 @@ def logout_view(request):
     return redirect('login.html')
 
 def home_view(request):
-    return render(request, 'home.html')
+    return render(request, 'index')
 
 def menu_view(request):
     request.session['usuario'] = request.user.username
