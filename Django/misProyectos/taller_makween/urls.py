@@ -2,8 +2,8 @@ from django.urls import path, include # Utilizar para autenticación.
 from . import views
 
 urlpatterns = [
-    path('', views.base, name='base'),
-    
+    path('', include('django.contrib.auth.urls')),
+    path('inicio', views.base, name='base'),
     path('index', views.index, name='index'),
     path('aboutus', views.aboutus, name='aboutus'),
     path('Checkout', views.Checkout, name='Checkout'),
