@@ -93,7 +93,6 @@ def mecanico_add(request):
         especialidad = request.POST['especialidad']
         Mecanico.objects.create(nombre=nombre, apellido=apellido, especialidad=especialidad)
         return redirect('crud_Mecanicos')
-
     return render(request, 'taller_makween/mecanico_add.html')
 
 def mecanico_del(request, pk):
@@ -103,6 +102,7 @@ def mecanico_del(request, pk):
         return redirect('crud_Mecanicos')
     context = {'mecanico': mecanico}
     return render(request, 'taller_makween/mecanico_confirm_delete.html', context)
+
 def mecanico_edit(request, pk):
     mecanico = get_object_or_404(Mecanico, id=pk)
     if request.method == 'POST':

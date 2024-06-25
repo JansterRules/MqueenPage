@@ -5,7 +5,6 @@ class Vehiculo(models.Model):
     marca = models.CharField(max_length=50)
     modelo = models.CharField(max_length=50)
     año = models.IntegerField()
-
     def __str__(self):
         return self.placa
 
@@ -17,6 +16,9 @@ class Mecanico(models.Model):
     apellidos = models.CharField(max_length=60)
     email = models.CharField(max_length=60)
     contraseña = models.CharField(max_length=60)
+    def __str__(self):
+        return self.rut
+    
 
 '''
 NO OLVIDAR!!!!:

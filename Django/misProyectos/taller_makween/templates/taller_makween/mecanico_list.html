@@ -1,39 +1,91 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}⚡Listar Mecánicos {% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 </head>
 <body>
-    <h1>Editar Mecanico</h1>
-    <br>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'IMG/archivoImg/logo.jpg' %}" alt="" width="70" height="70">
+            </a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="crud">CRUD - Makween⚡Taller mecánico</a>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'crud' %}">CRUD Vehiculos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'vehiculosAdd' %}">Agregar vehiculo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'crud_Mecanicos' %}">CRUD Mecánicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'crud_Mecanicos' %}">Agregar Mecánico</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <button type="button">
-        <a href="{% url 'Mecanico_add' %}"></href>
-    </button>
-
-    <div id="idMensajes">
-        {% if mensaje %}
-            {{mensaje}}
-        {% endif %}
-    </div>
-    <table>
+    <!-- contenido dinámico -->
+    <div class="container mt-5">
+        {% block content %}
+        <!-- Mecánicos CRUD -->
         {% if mecanicos %}
-            <th>rut</th>
-            <th>dv</th>
-            <th>nombres</th>
-            <th>apellidos</th>
-            <th>email</th>
-            <th>contraseña</th>
-            {% for x in Mecanico %}
-                <tr>
-                    <td>{{ x.Mecanico }}
-                    <td> <a href="{% url 'Mecanico_edit' pk=x.id_Mecanico %}">Editar</a>
-                </tr>
-    </table>
+        <h1>CRUD Mecánicos</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>RUT</th>
+                            <th>DV</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Email</th>
+                            <th>Contraseña</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for mecanico in mecanicos %}
+                            <tr>
+                                <td>{{ mecanico.rut }}</td>
+                                <td>{{ mecanico.dv }}</td>
+                                <td>{{ mecanico.nombres }}</td>
+                                <td>{{ mecanico.apellidos }}</td>
+                                <td>{{ mecanico.email }}</td>
+                                <td>{{ mecanico.contraseña }}</td>
+                                <td>
+                                    <a href="{% url 'mecanico_edit' mecanico.id %}" class="btn btn-primary btn-sm">Modificar</a>
+                                    <a href="{% url 'mecanico_del' mecanico.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-warning" role="alert">
+                No hay mecánicos disponibles.
+            </div>
+        {% endif %}
+        {% endblock %}
+    </div>
+
 </body>
 </html>
