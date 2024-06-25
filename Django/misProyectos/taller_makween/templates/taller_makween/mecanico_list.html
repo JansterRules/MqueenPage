@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}⚡Listar Mecánicos {% endblock %}</title>
+    <title>{% block title %}⚡CRUD{% endblock %}</title>
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
@@ -17,7 +17,7 @@
                 <img src="{% static 'IMG/archivoImg/logo.jpg' %}" alt="" width="70" height="70">
             </a>            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <a class="navbar-brand" href="crud">CRUD - Makween⚡Taller mecánico</a>
+                <a class="navbar-brand" href="{% url 'crud' %}">CRUD - Makween⚡Taller mecánico</a>
             </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"> </span>
@@ -28,7 +28,7 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'crud' %}">CRUD Vehiculos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'vehiculosAdd' %}">Agregar vehiculo</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'vehiculosAdd' %}">Agregar Vehículo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'crud_Mecanicos' %}">CRUD Mecánicos</a>
@@ -36,16 +36,13 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'mecanico_add' %}">Agregar Mecánico</a>
                     </li>
-                    
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- contenido dinámico -->
     <div class="container mt-5">
         {% block content %}
-        <!-- Mecánicos CRUD -->
         {% if mecanicos %}
         <h1>CRUD Mecánicos</h1>
             <div class="table-responsive">
@@ -71,8 +68,8 @@
                                 <td>{{ mecanico.email }}</td>
                                 <td>{{ mecanico.contraseña }}</td>
                                 <td>
-                                    <a href="{% url 'mecanico_edit' mecanico.id %}" class="btn btn-primary btn-sm">Modificar</a>
-                                    <a href="{% url 'mecanico_del' mecanico.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                                    <a href="{% url 'mecanico_edit' mecanico.rut %}" class="btn btn-primary btn-sm">Modificar</a>
+                                    <a href="{% url 'mecanico_del' mecanico.rut %}" class="btn btn-danger btn-sm">Eliminar</a>
                                 </td>
                             </tr>
                         {% endfor %}

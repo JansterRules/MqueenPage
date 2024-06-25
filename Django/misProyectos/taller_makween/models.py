@@ -10,12 +10,12 @@ class Vehiculo(models.Model):
 
 
 class Mecanico(models.Model):
-    rut = models.CharField(max_length=8, primary_key=True)
+    rut = models.CharField(max_length=12, primary_key=True )
     dv = models.CharField(max_length=1)
-    nombres = models.CharField(max_length=60)
-    apellidos = models.CharField(max_length=60)
-    email = models.CharField(max_length=60)
-    contraseña = models.CharField(max_length=60)
+    nombres = models.CharField(max_length=100)
+    apellidos = models.CharField(max_length=100)
+    email = models.EmailField() # Email field para verificar "@"
+    contraseña = models.CharField(max_length=100) 
     def __str__(self):
         return self.rut
     

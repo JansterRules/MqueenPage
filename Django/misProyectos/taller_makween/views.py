@@ -93,10 +93,11 @@ def mecanico_add(request):
         nombres = request.POST['nombres']
         apellidos = request.POST['apellidos']
         email = request.POST['email']
-        contrasena = request.POST['contrasena']
-        Mecanico.objects.create(rut=rut, dv=dv, nombres=nombres, apellidos=apellidos, email=email, contrasena=contrasena)
+        contraseña = request.POST['contrasena']
+        Mecanico.objects.create(rut=rut, dv=dv, nombres=nombres, apellidos=apellidos, email=email, contraseña=contraseña)
         return redirect('crud_Mecanicos')
     return render(request, 'taller_makween/mecanico_add.html')
+
 
 def mecanico_del(request, pk):
     mecanico = get_object_or_404(Mecanico, id=pk)
