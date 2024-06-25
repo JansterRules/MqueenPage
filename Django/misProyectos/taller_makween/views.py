@@ -100,7 +100,7 @@ def mecanico_add(request):
 
 
 def mecanico_del(request, pk):
-    mecanico = get_object_or_404(Mecanico, id=pk)
+    mecanico = get_object_or_404(Mecanico, rut=pk)
     if request.method == 'POST':
         mecanico.delete()
         return redirect('crud_Mecanicos')
@@ -108,14 +108,15 @@ def mecanico_del(request, pk):
     return render(request, 'taller_makween/mecanico_confirm_delete.html', context)
 
 def mecanico_edit(request, pk):
-    mecanico = get_object_or_404(Mecanico, id=pk)
+    mecanico = get_object_or_404(Mecanico, rut=pk)
     if request.method == 'POST':
-        mecanico.nombre = request.POST['nombre']
-        mecanico.apellido = request.POST['apellido']
-        mecanico.especialidad = request.POST['especialidad']
+        mecanico.dv = request.POST['dv']
+        mecanico.nombres = request.POST['nombres']
+        mecanico.apellidos = request.POST['apellidos']
+        mecanico.email = request.POST['email']
+        mecanico.contraseña = request.POST['contraseña']
         mecanico.save()
         return redirect('crud_Mecanicos')
-
     context = {'mecanico': mecanico}
     return render(request, 'taller_makween/mecanico_edit.html', context)
 
