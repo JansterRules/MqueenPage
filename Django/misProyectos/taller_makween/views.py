@@ -33,6 +33,10 @@ def register(request):
     context = {}
     return render(request, 'taller_makween/register.html', context)
 
+def logout(request): # Agregado.
+    logout(request)
+    return redirect('login')
+
 def regvacante(request):
     context = {}
     return render(request, 'taller_makween/regvacante.html', context)
