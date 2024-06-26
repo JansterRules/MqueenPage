@@ -1,3 +1,5 @@
+import L from "leaflet";
+
 var MapAPI = {
     initMap: function(mapId, center, zoom) {
         var map = L.map(mapId).setView(center, zoom);

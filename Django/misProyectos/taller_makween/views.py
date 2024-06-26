@@ -29,7 +29,35 @@ def faq(request):
 
 def tienda(request):
     context = {}
-    return render(request, 'taller_makween/tienda.html', context)
+    return render(request, 'taller_makween/tienda.hmtl', context)
+
+
+# tienda
+
+def tienda(request):
+    context = {}
+    productos = Producto.objects.all()
+    return render(request, 'taller_makween/tienda.html', {'productos':productos})
+
+def agregar_producto (request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.agregar(producto)
+    return redirect('cart')
+
+def restar_producto(request, producto_id):
+    carrito = carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.restar(producto)
+    return redirect ('cart')
+
+def limpiar_carrito(request):
+    carrito=carrito(request)
+    carrito.limpiar()
+    return redirect('cart')
+    
+# fin tienda
+
 
 def login_view(request):
     if request.method == 'POST':
