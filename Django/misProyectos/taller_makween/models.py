@@ -19,6 +19,12 @@ class Mecanico(models.Model):
     def __str__(self):
         return self.rut
     
+class Producto(models.Model):
+    nombre = models.CharField(max_length=64)
+    categoria = models.CharField(max_length=32)
+    precio = models.IntergerField()
+    def __str__(self):
+        return f'{self.nombre} --> {self.precio}'
 
 '''
 NO OLVIDAR!!!!:
