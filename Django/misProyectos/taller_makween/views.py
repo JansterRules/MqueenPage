@@ -29,13 +29,12 @@ def faq(request):
 
 def galeria(request):
     context = {}
-    return render(request, 'taller_makween/galeria.hmtl', context)
+    return render(request, 'taller_makween/galeria.html', context)
 
 
 # tienda
 
-def tienda(request):
-    context = {}
+def tienda_view(request):
     productos = Producto.objects.all()
     return render(request, 'taller_makween/tienda.html', {'productos':productos})
 
