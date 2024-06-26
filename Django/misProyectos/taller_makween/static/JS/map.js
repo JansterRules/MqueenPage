@@ -1,4 +1,5 @@
-import L from "leaflet";
+import L from leaflet;
+
 
 var MapAPI = {
     initMap: function(mapId, center, zoom) {
