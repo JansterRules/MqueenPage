@@ -1,13 +1,12 @@
 from django.urls import path, include
 from . import views
-from CarritoApp.views import tienda, agregar_producto, eliminar_producto, restar_producto, limpiar_carrito
 from django.contrib import admin
 
 
 urlpatterns = [
-    path('', include('django.contrib.auth.urls')),
-    path('inicio', views.base, name='base'),
-    path('index', views.index, name='index'),
+    path('admin', include('django.contrib.auth.urls')),
+    path('base', views.base, name='base'),
+    path('', views.index, name='index'),
     path('aboutus', views.aboutus, name='aboutus'),
     path('Checkout', views.Checkout, name='Checkout'),
     path('faq', views.faq, name='faq'),
@@ -25,11 +24,11 @@ urlpatterns = [
     path('mecanico_del/<str:pk>', views.mecanico_del, name='mecanico_del'),
     path('mecanico_edit/<str:pk>', views.mecanico_edit, name='mecanico_edit'),
     path('admin/', admin.site.urls),
-    path('', tienda, name="Tienda"),
-    path('agregar/<int:producto_id>/', agregar_producto, name="Add"),
-    path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
-    path('restar/<int:producto_id>/', restar_producto, name="Sub"),
-    path('limpiar/', limpiar_carrito, name="CLS"),
+    path('tienda', views.tienda, name="Tienda"),
+    path('agregar/<int:producto_id>/', views.agregar_producto, name="Add"),
+    path('eliminar/<int:producto_id>/', views.restar_producto, name="Del"),
+    path('restar/<int:producto_id>/', views.restar_producto, name="Sub"),
+    path('limpiar/', views.limpiar_carrito, name="CLS"),
     
 ]
 

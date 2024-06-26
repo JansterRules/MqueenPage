@@ -27,9 +27,9 @@ def faq(request):
     context = {}
     return render(request, 'taller_makween/faq.html', context)
 
-def tienda(request):
+def galeria(request):
     context = {}
-    return render(request, 'taller_makween/tienda.hmtl', context)
+    return render(request, 'taller_makween/galeria.hmtl', context)
 
 
 # tienda
@@ -40,7 +40,7 @@ def tienda(request):
     return render(request, 'taller_makween/tienda.html', {'productos':productos})
 
 def agregar_producto (request, producto_id):
-    carrito = Carrito(request)
+    carrito = carrito(request)
     producto = Producto.objects.get(id=producto_id)
     carrito.agregar(producto)
     return redirect('cart')
