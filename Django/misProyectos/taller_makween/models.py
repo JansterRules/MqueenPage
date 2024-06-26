@@ -25,6 +25,7 @@ class Producto(models.Model):
     precio = models.IntergerField()
     def __str__(self):
         return f'{self.nombre} --> {self.precio}'
+    
 
 '''
 NO OLVIDAR!!!!:

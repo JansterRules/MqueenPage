@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
-from .models import Vehiculo, Mecanico
+from .models import Vehiculo, Mecanico, Producto
 from .forms import RegisterForm
 
 
@@ -27,9 +27,9 @@ def faq(request):
     context = {}
     return render(request, 'taller_makween/faq.html', context)
 
-def galeria(request):
+def tienda(request):
     context = {}
-    return render(request, 'taller_makween/galeria.html', context)
+    return render(request, 'taller_makween/tienda.html', context)
 
 def login_view(request):
     if request.method == 'POST':
