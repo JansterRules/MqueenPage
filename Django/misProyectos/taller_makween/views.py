@@ -56,7 +56,6 @@ def limpiar_carrito(request):
     
 # fin tienda
 
-
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
@@ -70,6 +69,7 @@ def login_view(request):
     else:
         form = AuthenticationForm()
     return render(request, 'registration/login.html', {'form': form})
+
 
 def register(request):
     if request.method == 'POST':
