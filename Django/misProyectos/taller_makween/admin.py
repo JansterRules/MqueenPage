@@ -1,10 +1,17 @@
 from django.contrib import admin
-from .models import Vehiculo, Mecanico, Producto
+from .models import Vehiculo, Mecanico, Producto, Carrito, CarritoProducto
 
-# Register your models here.
 # Registramos Vehiculo
 admin.site.register(Vehiculo)
-# Registramos Mecnaico
+
+# Registramos Mecanico
 admin.site.register(Mecanico)
-# Registramos Productos
+
+# Registramos Producto
 admin.site.register(Producto)
+
+# Registramos Carrito
+admin.site.register(Carrito)
+
+# Registramos CarritoProducto
+admin.site.register(CarritoProducto)

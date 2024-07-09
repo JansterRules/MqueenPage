@@ -1,9 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
-from .models import Vehiculo, Mecanico, Producto
+from .models import Vehiculo, Mecanico, Producto, Carrito
 from .forms import RegisterForm
-
 
 
 def index(request):
@@ -37,22 +36,23 @@ def tienda_view(request):
     productos = Producto.objects.all()
     return render(request, 'taller_makween/tienda.html', {'productos':productos})
 
-def agregar_producto (request, producto_id):
-    carrito = carrito(request)
-    producto = Producto.objects.get(id=producto_id)
+def agregar_producto(request, producto_id):
+    producto = get_object_or_404(Producto, id=producto_id)
+    carrito, created = Carrito.objects.get_or_create(user=request.user)
     carrito.agregar(producto)
-    return redirect('cart')
+    return redirect('tienda')
+
 
 def restar_producto(request, producto_id):
     carrito = carrito(request)
     producto = Producto.objects.get(id=producto_id)
     carrito.restar(producto)
-    return redirect ('cart')
+    return redirect ('taller_makween/tienda.html')
 
 def limpiar_carrito(request):
     carrito=carrito(request)
     carrito.limpiar()
-    return redirect('cart')
+    return redirect('taller_makween/tienda.html')
     
 # fin tienda
 
