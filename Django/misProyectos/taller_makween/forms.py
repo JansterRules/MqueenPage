@@ -15,7 +15,9 @@ class RegisterForm(UserCreationForm):
         required=True, 
         label='Correo electrónico', 
         max_length=254, 
-        error_messages={'required': 'Este campo es obligatorio.'}
+        error_messages={'unique': "Este correo electrónico ya está en uso.",
+                        'required': "Este campo es obligatorio.",
+                        'invalid': "Introduce una dirección de correo válida.",}
     )
 
     password1 = forms.CharField(
@@ -43,12 +45,7 @@ class RegisterForm(UserCreationForm):
             'username': {
                 'unique': "Un usuario con ese nombre ya existe.",
                 'required': "Este campo es obligatorio.",
-            },
-            'email': {
-                'unique': "Este correo electrónico ya está en uso.",
-                'required': "Este campo es obligatorio.",
-                'invalid': "Introduce una dirección de correo válida.",
-            },
+            }
         }
 
     def clean_username(self):
