@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
-from .models import Vehiculo, Mecanico, Producto, Carrito
+from .models import Vehiculo, Mecanico, Producto
 from .forms import RegisterForm
+
 
 
 def index(request):
@@ -36,12 +37,11 @@ def tienda_view(request):
     productos = Producto.objects.all()
     return render(request, 'taller_makween/tienda.html', {'productos':productos})
 
-def agregar_producto(request, producto_id):
-    producto = get_object_or_404(Producto, id=producto_id)
-    carrito, created = Carrito.objects.get_or_create(user=request.user)
+def agregar_producto (request, producto_id):
+    carrito = carrito(request)
+    producto = Producto.objects.get(id=producto_id)
     carrito.agregar(producto)
-    return redirect('tienda')
-
+    return redirect('taller_makween/tienda.html')
 
 def restar_producto(request, producto_id):
     carrito = carrito(request)
@@ -54,6 +54,14 @@ def limpiar_carrito(request):
     carrito.limpiar()
     return redirect('taller_makween/tienda.html')
     
+def monto_total(request):
+    total = 0
+    if request.user.is_authenticated:
+        if "carrito" in request.session.keys():
+            for key, value in request.session["carrito"].items():
+                total += int(value["total"])
+    return {"monto_total": total}
+
 # fin tienda
 
 def login_view(request):
