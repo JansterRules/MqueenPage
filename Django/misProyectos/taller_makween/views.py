@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Vehiculo, Mecanico, Producto, Carrito
+from django.contrib import messages
 from .forms import RegisterForm
-
 
 def index(request):
     context = {}
@@ -56,6 +56,7 @@ def limpiar_carrito(request):
     
 # fin tienda
 
+
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
@@ -65,28 +66,38 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
+                messages.success(request, 'Inicio de sesión exitoso.')
                 return redirect('index')
+            else:
+                messages.error(request, 'Usuario o contraseña incorrectos. Intente nuevamente.')
+        else:
+            messages.error(request, 'Formulario inválido. Por favor, revise los datos ingresados.')
     else:
         form = AuthenticationForm()
     return render(request, 'registration/login.html', {'form': form})
-
 
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            user.is_staff = False  # ENTRAR COMO USUARIO ESTÁNDAR... EVITAR ADMINISTRADOR.
+            user.is_staff = False
             user.save()
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
+                messages.success(request, 'Registro exitoso. Bienvenido!')
                 return redirect('index')
+            else:
+                messages.error(request, 'Error de autenticación después del registro. Intente iniciar sesión.')
+        else:
+            messages.error(request, 'Formulario de registro inválido. Por favor, revise los datos ingresados.')
     else:
         form = RegisterForm()
     return render(request, 'registration/register.html', {'form': form})
+
 
 def logout_view(request):
     logout(request)

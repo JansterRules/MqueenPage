@@ -83,11 +83,19 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Registrar</button>
                         </form>
+                        {% if messages %}
+                            <div id="popupMessage" class="popup-message">
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
     {% bootstrap_javascript %}
+    <script src="{% static 'JS/scriptsLogReg.js' %}"></script>
 </body>
 </html>
