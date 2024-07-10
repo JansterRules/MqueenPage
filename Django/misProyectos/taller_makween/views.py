@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Vehiculo, Mecanico, Producto
 from .forms import RegisterForm
 from django.contrib import messages
+from taller_makween.Carrito import Carrito
 
 
 def index(request):
@@ -30,29 +31,26 @@ def galeria(request):
     context = {}
     return render(request, 'taller_makween/galeria.html', context)
 
-
 # tienda
-
 def tienda_view(request):
     productos = Producto.objects.all()
     return render(request, 'taller_makween/tienda.html', {'productos':productos})
-
-def agregar_producto (request, producto_id):
-    carrito = carrito(request)
+def agregar_producto(request, producto_id):
+    carrito = Carrito(request)
     producto = Producto.objects.get(id=producto_id)
     carrito.agregar(producto)
-    return redirect('taller_makween/tienda.html')
+    return redirect("tienda")
 
 def restar_producto(request, producto_id):
-    carrito = carrito(request)
-    producto = Producto.objects.get(id=producto_id)
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id) # En caso de fixear el agregar, retirar .get
     carrito.restar(producto)
-    return redirect ('taller_makween/tienda.html')
+    return redirect ('tienda')
 
 def limpiar_carrito(request):
-    carrito=carrito(request)
-    carrito.limpiar()
-    return redirect('taller_makween/tienda.html')
+    carrito=Carrito(request)
+    carrito.limpiar_carro()
+    return redirect('tienda')
     
 def monto_total(request):
     total = 0
@@ -63,8 +61,6 @@ def monto_total(request):
     return {"monto_total": total}
 
 # fin tienda
-
-
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)

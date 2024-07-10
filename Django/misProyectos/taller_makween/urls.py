@@ -1,7 +1,7 @@
 from django.urls import path, include
 from . import views
 from django.contrib import admin
-
+from taller_makween.views import agregar_producto
 
 urlpatterns = [
     path('admin', include('django.contrib.auth.urls')),
@@ -25,7 +25,7 @@ urlpatterns = [
     path('mecanico_edit/<str:pk>', views.mecanico_edit, name='mecanico_edit'),
     path('admin/', admin.site.urls),
     path('tienda/', views.tienda_view, name="tienda"),
-    path('agregar/<int:producto_id>/', views.agregar_producto, name="Add"),
+    path('agregar/<int:producto_id>/', agregar_producto, name="Add"),
     path('eliminar/<int:producto_id>/', views.restar_producto, name="Del"),
     path('restar/<int:producto_id>/', views.restar_producto, name="Sub"),
     path('limpiar/', views.limpiar_carrito, name="CLS"),
