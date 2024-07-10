@@ -1,5 +1,4 @@
 {% extends 'taller_makween/base.html' %}
-import L from "leaflet";
 {% load static %}
 
 {% block title %}⚡ Sobre Nosotros {% endblock %}
@@ -86,10 +85,10 @@ import L from "leaflet";
             </p>
          </div>
          <div class="col-md-5">
-            <div id="map" class="mb-4" style="height: 400px;"> </div>
-            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <div id="map" style="height: 400px;"></div>
+            <script type="module" src="{% static 'JS/map.js' %}"></script>
          </div>
       </div>
+      <hr class="featurette-divider">
       
-      <script src="{% static 'JS/map.js' %}"></script>
 {% endblock %}
